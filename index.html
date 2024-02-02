@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <title>SJS-BD</title>
+</head>
+<body>
+    <div id="preloader"></div>
+    <audio id="myAudio" src="./hbd.mp3" controls loop></audio>
+    <div class="window-1">
+        <section>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+            <span class="star-span"></span>
+        </section>
+        <div class="sign">
+            <span class="fast-flicker">h</span>i<span class="flicker">sh</span>armily 
+        </div>
+        <div class="sub-title">
+            <h2>Are you ready to experience something exciting??</h2>
+        </div>
+        <div class="continue-btn1">
+            <div class="wrap">
+                <button class="w-btn" onclick="switchWindows()">Yes</button>
+            </div>
+        </div>
+    </div>
+    <div class="window-2">
+        <div class="confetti">
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+        </div>
+        <div id="balloon-container"></div>
+        <div class="w2-text_container">
+            <p>🎂<span>Happy Birthday!</span>🎂</p>
+            <p>Sharmily Jahan Shila 🦋</p>
+        </div>
+        <div class='console-container'>
+            <span id='text'></span>
+            <div class='console-underscore' id='console'>&#95;</div>
+        </div>
+        <div class="cake">
+            <div class="plate"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="drip drip1"></div>
+            <div class="drip drip2"></div>
+            <div class="drip drip3"></div>
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        audio.paused();
+        function switchWindows() {
+                document.querySelector('.window-1').style.display = 'none';
+                document.querySelector('.window-2 .confetti').style.display = 'block';
+                if (audio.paused) {
+                    audio.play();
+                }
+                createBalloons(300);
+                setTimeout(removeBalloons, 7000);
+                var container = document.querySelector('.w2-text_container');
+                container.classList.add('fade-in');
+                consoleText([' ', ' ', ' ', ' ', ' ', ' ',
+                'Today is...',
+                'as beautiful as other days',
+                'but you realize',
+                'another year has gone',
+                'in a blink of the eyes',
+                '<strong>however</strong>',
+                'Do you know..?',
+                'today is just special',
+                'so special to you',
+                'that\'s why',
+                'Let\'s make it...',
+                'the best celebration ever',
+                'and let me share...',
+                'a piece of happiness to you',
+                'I made all this...',
+                'as a birthday present to you',
+                'thanks for being there',
+                'thanks for the friendship we made',
+                'thanks for everything',
+                'I wish you all the best',
+                'May your life be at ease',
+                'May all your wishes come true',
+                'Remember',
+                'your ambitions',
+                'you live as a free bird...',
+                'flying in the blue sky',
+                'Now things are different...',
+                'real story of your life',
+                'is just about to begin',
+                'indeed..',
+                'but...',
+                'don\'t worry',
+                'because...',
+                'Allah has your back',
+                'and',
+                'this year will be better',
+                'and I hope',
+                'you\'ll find...',
+                'happiness along the way',
+                'keep your spirit up',
+                'enjoy every single moment...',
+                'that you experience today',
+                'fill it with your most beautiful smile',
+                'and make it the best memory..',
+                'lastly...',
+                'I\'d like to wish you one more time',
+                'a very Happy Birthday Sharmily 🦋🦋'], 'text', ['sienna']);
+            }
+    </script>
+    <script src="./main.js"></script>
+</body>
+</html>
